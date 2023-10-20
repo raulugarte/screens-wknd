@@ -1,11 +1,22 @@
 {
-  "project": "XSC Demo",
-  "plugins": [
+  "project": "WKND",
+  "plugins": [{
+    "id": "cif",
+    "title": "Commerce",
+    "environments": [
+        "edit"
+    ],
+    "url": "/tools/picker/dist/index.html",
+    "isPalette": true,
+    "paletteRect": "top: 54px; left: 5px; bottom: 5px; width: 300px; height: calc(100% - 59px); border-radius: var(--hlx-sk-button-border-radius); overflow: hidden; resize: horizontal;"
+    },        
     {
       "id": "library",
       "title": "Library",
-      "environments": [ "dev", "edit" ],
-      "url": "https://main--xsc-wknd--hlxsites.hlx.page/tools/sidekick/library.html",
+      "environments": [ "edit" ],
+      "isPalette": true,
+      "paletteRect": "top: auto; bottom: 20px; left: 20px; height: 398px; width: 360px;",
+      "url": "/block-library/library",
       "includePaths": [ "**.docx**" ]
     },
     {
@@ -14,12 +25,10 @@
       "environments": [
         "edit"
       ],
-      "url": "https://experience.adobe.com/solutions/CQ-assets-selectors/static-assets/resources/franklin/asset-selector.html",
+      "url": "/aem-asset-selector",
       "isPalette": true,
-      "includePaths": [
-        "**.docx**"
-      ],
-      "paletteRect": "top: 50px; bottom: 10px; right: 10px; left: auto; width:400px; height: calc(100vh - 60px)"
-    }
+      "includePaths": [ "**.docx**" ],
+      "paletteRect": "top: auto; bottom: 20px; left: 20px; width:1000px; height:700px"
+    } 
   ]
 }

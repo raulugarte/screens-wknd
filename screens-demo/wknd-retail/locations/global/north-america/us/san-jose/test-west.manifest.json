@@ -1,0 +1,67 @@
+{
+  "version": "3.0",
+  "contentDelivery": {
+    "providers": [
+      {
+        "name": "franklin",
+        "endpoint": "/"
+      }
+    ],
+    "defaultProvider": "franklin"
+  },
+  "timestamp": 1697624399089,
+  "entries": [
+    {
+      "path": "/screens-demo/wknd-retail/locations/global/north-america/us/san-jose/test-west.html",
+      "timestamp": 1693909156000
+    },
+    {
+      "path": "/scripts/scripts.js",
+      "timestamp": 1695989957000
+    },
+    {
+      "path": "/styles/styles.css",
+      "timestamp": 1694606645000
+    },
+    {
+      "path": "/blocks/screens-looping-content/screens-looping-content.js",
+      "timestamp": 1695983443000
+    },
+    {
+      "path": "/blocks/screens-looping-content/screens-looping-content.css",
+      "timestamp": 1686036191000
+    },
+    {
+      "path": "/blocks/columns/columns.js",
+      "timestamp": 1686036189000
+    },
+    {
+      "path": "/blocks/columns/columns.css",
+      "timestamp": 1686036189000
+    },
+    {
+      "path": "/styles/lazy-styles.css",
+      "timestamp": 1686036193000
+    },
+    {
+      "path": "/scripts/delayed.js",
+      "timestamp": 1694517580000
+    },
+    {
+      "path": "/tools/preview/preview.js",
+      "timestamp": 1686036193000
+    },
+    {
+      "path": "/scripts/lib-polaris.js",
+      "timestamp": 1686036192000
+    },
+    {
+      "path": "/scripts/lib-franklin.js",
+      "timestamp": 1695983443000
+    },
+    {
+      "path": "/screens-demo/schedule.json",
+      "timestamp": 1685981566000
+    }
+  ]
+}

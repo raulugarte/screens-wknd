@@ -14,7 +14,7 @@
 import {
   getMetadata,
   toClassName,
-} from '../../scripts/aem.js';
+} from '../../scripts/lib-franklin.js';
 import {
   createPopupButton,
   getOverlay,

@@ -15,7 +15,7 @@ import {
   sampleRUM,
   toCamelCase,
   toClassName,
-} from '../aem.js';
+} from '../lib-franklin.js';
 
 export const DEFAULT_OPTIONS = {
   root: '/experiments',
@@ -456,8 +456,4 @@ export function patchBlockConfig(config) {
     jsPath: `${origin}${codeBasePath}${path}/${config.blockName}.js`,
   };
 }
-if (window.hlx.patchBlockConfig) window.hlx.patchBlockConfig.push(patchBlockConfig);
-else {
-  window.hlx.patchBlockConfig=[];
-  window.hlx.patchBlockConfig.push(patchBlockConfig);
-}
+window.hlx.patchBlockConfig.push(patchBlockConfig);

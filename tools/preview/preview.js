@@ -10,7 +10,7 @@
  * governing permissions and limitations under the License.
  */
 
-import { loadCSS } from '../../scripts/aem.js';
+import { loadCSS } from '../../scripts/lib-franklin.js';
 
 function createPreviewOverlay(cls) {
   const overlay = document.createElement('div');

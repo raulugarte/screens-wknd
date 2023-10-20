@@ -1,0 +1,155 @@
+{
+  "version": "3.0",
+  "contentDelivery": {
+    "providers": [
+      {
+        "name": "franklin",
+        "endpoint": "/"
+      }
+    ],
+    "defaultProvider": "franklin"
+  },
+  "timestamp": 1697624407237,
+  "entries": [
+    {
+      "path": "/screens-demo/wknd-kiosk-commerce.html",
+      "timestamp": 1697107344000
+    },
+    {
+      "path": "/scripts/scripts.js",
+      "timestamp": 1695989957000
+    },
+    {
+      "path": "/service-worker.js",
+      "timestamp": 1693913294000
+    },
+    {
+      "path": "/styles/styles.css",
+      "timestamp": 1694606645000
+    },
+    {
+      "path": "/screens-demo/media_1a8a994b3863323db78be29640b481f6c06e60c52.png?width=750&format=png&optimize=medium",
+      "hash": "1a8a994b3863323db78be29640b481f6c06e60c52"
+    },
+    {
+      "path": "/screens-demo/media_1a36b8470937b67b42e2c240c06d8e32d13eaa2e8.png?width=750&format=png&optimize=medium",
+      "hash": "1a36b8470937b67b42e2c240c06d8e32d13eaa2e8"
+    },
+    {
+      "path": "/screens-demo/media_11fbc5bccd210bd5fac10f6d804520be84e21093d.png?width=750&format=png&optimize=medium",
+      "hash": "11fbc5bccd210bd5fac10f6d804520be84e21093d"
+    },
+    {
+      "path": "/screens-demo/media_10c2f17d05dcd3601f3fd29ed8fd947f959ee5dc2.png?width=750&format=png&optimize=medium",
+      "hash": "10c2f17d05dcd3601f3fd29ed8fd947f959ee5dc2"
+    },
+    {
+      "path": "/screens-demo/media_12593fe66c7eb756c8ca9bc938c4d976a45193076.png?width=750&format=png&optimize=medium",
+      "hash": "12593fe66c7eb756c8ca9bc938c4d976a45193076"
+    },
+    {
+      "path": "/blocks/screens-looping-content/screens-looping-content.js",
+      "timestamp": 1695983443000
+    },
+    {
+      "path": "/blocks/screens-looping-content/screens-looping-content.css",
+      "timestamp": 1686036191000
+    },
+    {
+      "path": "/blocks/idle-carousel/idle-carousel.js",
+      "timestamp": 1690449284000
+    },
+    {
+      "path": "/blocks/idle-carousel/idle-carousel.css",
+      "timestamp": 1690732107000
+    },
+    {
+      "path": "/blocks/category/category.js",
+      "timestamp": 1694087590000
+    },
+    {
+      "path": "/blocks/category/category.css",
+      "timestamp": 1690561211000
+    },
+    {
+      "path": "/blocks/product-listing/product-listing.css",
+      "timestamp": 1694436062000
+    },
+    {
+      "path": "/blocks/product-listing/product-listing.js",
+      "timestamp": 1697026296000
+    },
+    {
+      "path": "/blocks/product-detail/product-detail.css",
+      "timestamp": 1694517580000
+    },
+    {
+      "path": "/blocks/product-detail/product-detail.js",
+      "timestamp": 1697026296000
+    },
+    {
+      "path": "/blocks/offers/offers.js",
+      "timestamp": 1690732107000
+    },
+    {
+      "path": "/blocks/offers/offers.css",
+      "timestamp": 1690732107000
+    },
+    {
+      "path": "/styles/AdobeClean-Regular.ttf",
+      "timestamp": 1690561211000
+    },
+    {
+      "path": "/styles/AdobeClean-Bold.ttf",
+      "timestamp": 1690561211000
+    },
+    {
+      "path": "/styles/lazy-styles.css",
+      "timestamp": 1686036193000
+    },
+    {
+      "path": "/scripts/delayed.js",
+      "timestamp": 1694517580000
+    },
+    {
+      "path": "/scripts/lib-polaris.js",
+      "timestamp": 1686036192000
+    },
+    {
+      "path": "/scripts/lib-franklin.js",
+      "timestamp": 1695983443000
+    },
+    {
+      "path": "/tools/preview/preview.js",
+      "timestamp": 1686036193000
+    },
+    {
+      "path": "/tools/preview/preview.css",
+      "timestamp": 1686036193000
+    },
+    {
+      "path": "/screens-demo/schedule.json",
+      "timestamp": 1685981566000
+    },
+    {
+      "path": "/scripts/qrcode.min.js",
+      "timestamp": 1694517580000
+    },
+    {
+      "path": "/media_1863f674b617cda31054ecb1e1bf0f4bbfbf2dc76.mp4",
+      "timestamp": 1697106904000
+    },
+    {
+      "path": "/media_1d29dcefbbdc79ef6fa3ea2715b9c396a1f0d4535.mp4",
+      "timestamp": 1697106903000
+    },
+    {
+      "path": "/media_1707daded7eda10a00cd4bf9405c470f92886d256.mp4",
+      "timestamp": 1697106905000
+    },
+    {
+      "path": "/media_1f2c46df11e09ae1bca3fe440afd417c9c0196ce1.mp4",
+      "timestamp": 1697106905000
+    }
+  ]
+}
