@@ -1,23 +1,28 @@
-import { decorateIcons, getMetadata } from '../../scripts/aem.js';
+import { decorateIcons } from '../../scripts/lib-franklin.js';
 
 /**
  * loads and decorates the footer
- * @param {Element} block The footer block element
+ * @param {Element} block The header block element
  */
+
 export default async function decorate(block) {
-  block.textContent = '';
+  const navPath = window.wknd.demoConfig.demoBase || '';
 
-  const footerMeta = getMetadata('footer');
-  const footerPath = footerMeta ? new URL(footerMeta).pathname : '/footer';
-  const resp = await fetch(`${footerPath}.plain.html`);
+  const resp = await fetch(`${navPath}/footer.plain.html`, window.location.pathname.endsWith('/footer') ? { cache: 'reload' } : {});
   if (resp.ok) {
-    const html = await resp.text();
+    block.textContent = '';
 
-    // decorate footer DOM
+    const html = await resp.text();
     const footer = document.createElement('div');
     footer.innerHTML = html;
+    await decorateIcons(footer);
 
-    decorateIcons(footer);
+    const classes = ['brand', 'nav', 'follow', 'disc'];
+    let f = footer.firstElementChild;
+    while (f && classes.length) {
+      f.classList.add(classes.shift());
+      f = f.nextElementSibling;
+    }
     block.append(footer);
   }
 }

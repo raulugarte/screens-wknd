@@ -1,125 +1,98 @@
-import { loadBlocks } from '../../scripts/aem.js';
-import { decorateMain } from '../../scripts/scripts.js';
+/**
+ * @typedef TabInfo
+ * @property {string} name
+ * @property {HTMLElement} $tab
+ * @property {HTMLElement} $content
+ */
 
-async function generateTabMainBlock(html) {
-  const main = document.createElement('main');
-  main.innerHTML = html;
-  decorateMain(main);
-  await loadBlocks(main);
-  return main;
-}
-
-const HASH_REGEX = /tabs--(.*)--(.*)/;
-const HASH_SCROLL_POLL_INTERVAL_DELAY_IN_MILLI_SECONDS = 20;
-function decodeHashToObject() {
-  if (!window.location.hash || window.location.hash.length < 3) {
+/**
+ * @param {HTMLElement} $block
+ * @return {TabInfo[]}
+ */
+export function createTabs($block) {
+  const $ul = $block.querySelector('ul');
+  if (!$ul) {
     return null;
   }
-
-  const base = decodeURI(window.location.hash.slice(1));
-  const matches = base.match(HASH_REGEX);
-  if (matches) {
+  /** @type TabInfo[] */
+  const tabs = [...$ul.querySelectorAll('li')].map(($li) => {
+    const title = $li.textContent;
+    const name = title.toLowerCase().trim();
     return {
-      tabMatches: (title, index) => matches[2] === title && parseFloat(matches[1]) === index,
-      tabsComponentMatches: (index) => parseFloat(matches[1]) === index,
+      title,
+      name,
+      $tab: $li,
     };
-  }
-
-  return null;
-}
-
-function generateHiddenInput(tabSectionIndex, presentTabContents, block) {
-  const hashObj = decodeHashToObject();
-  for (let i = presentTabContents.length - 1; i > -1; i -= 1) {
-    const { tabTitle } = presentTabContents[i].dataset;
-    const input = document.createElement('input');
-
-    input.setAttribute('type', 'radio');
-    input.setAttribute('id', `tab-${tabSectionIndex}-${i}`);
-    input.setAttribute('name', `tabs-${tabSectionIndex}`);
-
-    if (
-      (hashObj && hashObj.tabMatches(tabTitle, tabSectionIndex))
-        || ((!hashObj || !hashObj.tabsComponentMatches(tabSectionIndex)) && i === 0)
-    ) {
-      input.setAttribute('checked', true);
-    }
-    block.prepend(input);
-  }
-}
-
-function generateTabNav(tabSectionIndex, presentTabContents) {
-  const ul = document.createElement('ul');
-  ul.setAttribute('class', 'tabs-control');
-
-  presentTabContents.forEach((tabContent, index) => {
-    const { tabTitle } = tabContent.dataset;
-    const li = document.createElement('li');
-    li.setAttribute('class', 'tab');
-
-    const label = document.createElement('label');
-    label.setAttribute('for', `tab-${tabSectionIndex}-${index}`);
-
-    const h2 = document.createElement('h2');
-
-    const a = document.createElement('a');
-    a.innerHTML = tabTitle;
-    h2.append(a);
-    label.append(h2);
-    li.append(label);
-
-    li.addEventListener('click', () => {
-      // eslint-disable-next-line no-restricted-globals
-      history.replaceState(undefined, undefined, `#tabs--${tabSectionIndex}--${tabTitle}`);
-    });
-
-    ul.append(li);
   });
-  return ul;
+  // move $ul below section div
+  $block.replaceChildren($ul);
+
+  // search referenced sections and move them inside the tab-container
+  const $wrapper = $block.parentElement;
+  const $container = $wrapper.parentElement;
+  const $sections = document.querySelectorAll('[data-tab]');
+
+  // move the tab's sections before the tab riders.
+  [...$sections].forEach(($tabContent) => {
+    const name = $tabContent.dataset.tab.toLowerCase().trim();
+    /** @type TabInfo */
+    const tab = tabs.find((t) => t.name === name);
+    if (tab) {
+      const $el = document.createElement('div');
+      $el.classList.add('tab-item');
+      $el.append(...$tabContent.children);
+      $el.classList.add('hidden');
+      $container.insertBefore($el, $wrapper);
+      $tabContent.remove();
+      tab.$content = $el;
+    }
+  });
+  return tabs;
 }
 
-export default async function decorate(block) {
-  const presentTabContents = [...block.querySelectorAll(':scope > div.contents-wrapper > div.contents')];
+/**
+ * @param {HTMLElement} $block
+ */
+export default function decorate($block) {
+  const tabs = createTabs($block);
 
-  if (presentTabContents && presentTabContents.length > 0) {
-    const tabSectionIndex = [...block.closest('main').childNodes].indexOf(block.closest('.section'));
+  // move the tab riders in front
+  const $wrapper = $block.parentElement;
+  const $container = $wrapper.parentElement;
+  $container.insertBefore($wrapper, $container.firstElementChild);
 
-    block.prepend(generateTabNav(tabSectionIndex, presentTabContents));
-    generateHiddenInput(tabSectionIndex, presentTabContents, block);
+  tabs.forEach((tab, index) => {
+    const $button = document.createElement('button');
+    const { $tab, title, name } = tab;
+    $button.textContent = title;
+    $tab.replaceChildren($button);
 
-    const hashObj = decodeHashToObject();
+    $button.addEventListener('click', () => {
+      const $activeButton = $block.querySelector('button.active');
+      const blockPosition = $block.getBoundingClientRect().top;
+      const offsetPosition = blockPosition + window.scrollY - 80;
 
-    const promises = presentTabContents.map(async (contents) => {
-      const tabMainBlock = await generateTabMainBlock(contents.innerHTML);
-      if (tabMainBlock) {
-        const fragmentSection = tabMainBlock.querySelector(':scope .section');
-        if (fragmentSection) {
-          const section = block.closest('.section');
-          const cssClasses = [...fragmentSection.classList].filter((val) => val !== 'two-columns');
-          section.classList.add(...cssClasses);
-        }
-        if (hashObj && hashObj.tabMatches(contents.dataset.tabTitle, tabSectionIndex)) {
-          return Promise.resolve(true);
-        }
+      if ($activeButton !== $tab) {
+        $activeButton.classList.remove('active');
+        $button.classList.add('active');
+
+        tabs.forEach((t) => {
+          if (name === t.name) {
+            t.$content.classList.remove('hidden');
+          } else {
+            t.$content.classList.add('hidden');
+          }
+          window.scrollTo({
+            top: offsetPosition,
+            behavior: 'smooth',
+          });
+        });
       }
-      return Promise.resolve(false);
     });
 
-    const results = await Promise.all(promises);
-    if (results.indexOf(true) > -1) {
-      const section = block.closest('.section');
-
-      const pollInterval = window.setInterval(() => {
-        if (section.style.display !== 'none') {
-          window.clearInterval(pollInterval);
-          block.scrollIntoView();
-        }
-      }, HASH_SCROLL_POLL_INTERVAL_DELAY_IN_MILLI_SECONDS);
+    if (index === 0) {
+      $button.classList.add('active');
+      tab.$content.classList.remove('hidden');
     }
-  }
-
-  /**
-   * fix bug in tabs block
-   */
-  block.parentElement.setAttribute('class', [...block.parentElement.classList].slice(0, 3).join(' '));
+  });
 }

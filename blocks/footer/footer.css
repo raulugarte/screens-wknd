@@ -1,8 +1,10 @@
+/* stylelint-disable */
+
 footer {
-  padding: 2rem;
-  background-color: var(--background-color-dark);
-  font-size: var(--body-font-size-s);
-  color: var(--text-color-light);
+  background-color: #202020;
+  color: #ebebeb;
+  padding: 1rem 0 1.5rem;
+  margin-top: 3rem;
 }
 
 footer .footer {
@@ -10,48 +12,58 @@ footer .footer {
   margin: auto;
 }
 
+.footer > div {
+  display: grid;
+  grid-template-columns: auto 50% auto;
+  grid-template-rows: auto;
+  grid-template-areas:
+          "brand nav follow"
+          "disc disc disc";
+}
+
+.footer .brand {
+  grid-area: brand;
+}
+
+.footer .nav {
+  grid-area: nav;
+}
+
+.footer .follow {
+  grid-area: follow;
+  display: block;
+  font-size: 14px;
+  text-transform: uppercase;
+  padding: 15px 17px;
+  text-decoration: none;
+}
+
+.footer .disc {
+  grid-area: disc;
+}
+
+footer ul {
+  list-style: none;
+  margin: 0;
+  padding-inline-start: 0;
+}
+
+footer li {
+  display: block;
+  float: left;
+  color: #202020;
+  font-size: 14px;
+  text-transform: uppercase;
+  padding: 15px 17px;
+  text-decoration: none;
+}
+
+.footer a {
+  color: white;
+}
+
 footer .footer p {
   margin: 0;
-  padding-top: 10px;
-}
-
-footer .footer ul {
-  display: flex;
-  list-style: none;
-  justify-content: space-between;
-  padding: 0;
-}
-
-footer .footer ul > li {
-  font-family: tertiary-font, notosans-regular, sans-serif;
-  font-size: 26px;
-  line-height: 22px;
-  text-transform: capitalize;
-  font-stretch: extra-expanded;
-}
-
-footer .footer a {
-  color: var(--link-text-color);
-}
-
-footer .footer ul > li > a {
-  display: block;
-    width: 215px;
-    height: 25px;
-    background: #FA6600;
-    padding: 10px;
-    text-align: center;
-    border-radius: 5px;
-    font-weight: bold;
-    line-height: 25px;
-    font-size: 21px;
-}
-
-footer .footer p::before {
-  content:"";
-  display:block;
-  width: 100%;
-  max-width:100%;
-  border-bottom: 0.3px solid #757575;
-  margin: 0 auto 20px;
+  font-size: var(--body-font-size-xs);
+  line-height: 1.25;
 }
