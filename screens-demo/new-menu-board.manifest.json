@@ -9,11 +9,11 @@
     ],
     "defaultProvider": "franklin"
   },
-  "timestamp": 1700151709531,
+  "timestamp": 1700151716566,
   "entries": [
     {
-      "path": "/screens-demo/wknd-kiosk-commerce.html",
-      "timestamp": 1699891241000
+      "path": "/screens-demo/new-menu-board.html",
+      "timestamp": 1700150692000
     },
     {
       "path": "/scripts/scripts.js",
@@ -28,24 +28,28 @@
       "timestamp": 1697801144000
     },
     {
-      "path": "/screens-demo/media_1a8a994b3863323db78be29640b481f6c06e60c52.png?width=750&format=png&optimize=medium",
-      "hash": "1a8a994b3863323db78be29640b481f6c06e60c52"
+      "path": "/screens-demo/media_1bc7b0d7a4246e2ba5ea1f724a88373c8f0e75d7a.png?width=750&format=png&optimize=medium",
+      "hash": "1bc7b0d7a4246e2ba5ea1f724a88373c8f0e75d7a"
     },
     {
-      "path": "/screens-demo/media_1a36b8470937b67b42e2c240c06d8e32d13eaa2e8.png?width=750&format=png&optimize=medium",
-      "hash": "1a36b8470937b67b42e2c240c06d8e32d13eaa2e8"
+      "path": "/screens-demo/media_185ebc518bb1ebc1902e4c3460de678f0d4a16e49.png?width=750&format=png&optimize=medium",
+      "hash": "185ebc518bb1ebc1902e4c3460de678f0d4a16e49"
     },
     {
-      "path": "/screens-demo/media_11fbc5bccd210bd5fac10f6d804520be84e21093d.png?width=750&format=png&optimize=medium",
-      "hash": "11fbc5bccd210bd5fac10f6d804520be84e21093d"
+      "path": "/screens-demo/media_1d166316f036251c10d328ae7a14f56df1166b299.png?width=750&format=png&optimize=medium",
+      "hash": "1d166316f036251c10d328ae7a14f56df1166b299"
     },
     {
-      "path": "/screens-demo/media_10c2f17d05dcd3601f3fd29ed8fd947f959ee5dc2.png?width=750&format=png&optimize=medium",
-      "hash": "10c2f17d05dcd3601f3fd29ed8fd947f959ee5dc2"
+      "path": "/screens-demo/media_124de9bd0279aa0e23700944753d1d84ccca260a0.png?width=750&format=png&optimize=medium",
+      "hash": "124de9bd0279aa0e23700944753d1d84ccca260a0"
     },
     {
-      "path": "/screens-demo/media_12593fe66c7eb756c8ca9bc938c4d976a45193076.png?width=750&format=png&optimize=medium",
-      "hash": "12593fe66c7eb756c8ca9bc938c4d976a45193076"
+      "path": "/screens-demo/media_171a296e36b9b20311830532b179a4c28452de01d.png?width=750&format=png&optimize=medium",
+      "hash": "171a296e36b9b20311830532b179a4c28452de01d"
+    },
+    {
+      "path": "/screens-demo/media_11e30d8e26c10bf854d1f29c13b93ac842dfefc8e.png?width=750&format=png&optimize=medium",
+      "hash": "11e30d8e26c10bf854d1f29c13b93ac842dfefc8e"
     },
     {
       "path": "/blocks/screens-looping-content/screens-looping-content.js",

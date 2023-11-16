@@ -2,7 +2,7 @@
   "channels": [
     {
       "manifestPath": "/screens-demo/wknd-ordering-kiosk.manifest.json",
-      "lastModified": "2023-09-29T12:19:17.000Z",
+      "lastModified": "2023-11-10T09:22:32.000Z",
       "hierarchy": [
         {
           "title": "screens-demo",
@@ -15,7 +15,7 @@
     },
     {
       "manifestPath": "/screens-demo/wknd-cafe-menu.manifest.json",
-      "lastModified": "2023-09-29T12:19:17.000Z",
+      "lastModified": "2023-11-13T16:00:41.000Z",
       "hierarchy": [
         {
           "title": "screens-demo",
@@ -28,7 +28,7 @@
     },
     {
       "manifestPath": "/screens-demo/wknd-cafe-menuboard.manifest.json",
-      "lastModified": "2023-09-29T12:19:17.000Z",
+      "lastModified": "2023-11-13T16:00:41.000Z",
       "hierarchy": [
         {
           "title": "screens-demo",
@@ -41,7 +41,7 @@
     },
     {
       "manifestPath": "/screens-demo/wknd-kiosk-commerce.manifest.json",
-      "lastModified": "2023-10-12T10:42:24.000Z",
+      "lastModified": "2023-11-13T16:00:41.000Z",
       "hierarchy": [
         {
           "title": "screens-demo",
@@ -51,6 +51,45 @@
       "externalId": "/screens-demo/wknd-kiosk-commerce",
       "title": "Idle-carousel",
       "liveUrl": "https://main--screens-wknd--raulugarte.hlx.live/screens-demo/wknd-kiosk-commerce.html"
+    },
+    {
+      "manifestPath": "/screens-demo/commerce.manifest.json",
+      "lastModified": "2023-11-13T16:00:41.000Z",
+      "hierarchy": [
+        {
+          "title": "screens-demo",
+          "path": "/screens-demo"
+        }
+      ],
+      "externalId": "/screens-demo/commerce",
+      "title": "WKND Kiosk",
+      "liveUrl": "https://main--screens-wknd--raulugarte.hlx.live/screens-demo/commerce.html"
+    },
+    {
+      "manifestPath": "/screens-demo/commercetest123.manifest.json",
+      "lastModified": "2023-11-13T16:00:41.000Z",
+      "hierarchy": [
+        {
+          "title": "screens-demo",
+          "path": "/screens-demo"
+        }
+      ],
+      "externalId": "/screens-demo/commercetest123",
+      "title": "Commerce Test 123",
+      "liveUrl": "https://main--screens-wknd--raulugarte.hlx.live/screens-demo/commercetest123.html"
+    },
+    {
+      "manifestPath": "/screens-demo/new-menu-board.manifest.json",
+      "lastModified": "2023-11-16T16:04:52.000Z",
+      "hierarchy": [
+        {
+          "title": "screens-demo",
+          "path": "/screens-demo"
+        }
+      ],
+      "externalId": "/screens-demo/new-menu-board",
+      "title": "New Menu Board",
+      "liveUrl": "https://main--screens-wknd--raulugarte.hlx.live/screens-demo/new-menu-board.html"
     }
   ],
   "metadata": {

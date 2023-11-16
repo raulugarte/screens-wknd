@@ -9,19 +9,23 @@
     ],
     "defaultProvider": "franklin"
   },
-  "timestamp": 1697624402096,
+  "timestamp": 1700151705026,
   "entries": [
     {
       "path": "/screens-demo/wknd-cafe-menu.html",
-      "timestamp": 1693909155000
+      "timestamp": 1699891241000
     },
     {
       "path": "/scripts/scripts.js",
-      "timestamp": 1695989957000
+      "timestamp": 1697801143000
+    },
+    {
+      "path": "/service-worker.js",
+      "timestamp": 1697801143000
     },
     {
       "path": "/styles/styles.css",
-      "timestamp": 1694606645000
+      "timestamp": 1697801144000
     },
     {
       "path": "/screens-demo/media_1342622f99e6ac916eebd5723b78e73d592f3d4dd.png?width=750&format=png&optimize=medium",
@@ -49,39 +53,39 @@
     },
     {
       "path": "/blocks/screens-looping-content/screens-looping-content.js",
-      "timestamp": 1695983443000
+      "timestamp": 1697801139000
     },
     {
       "path": "/blocks/screens-looping-content/screens-looping-content.css",
-      "timestamp": 1686036191000
+      "timestamp": 1697801139000
     },
     {
       "path": "/blocks/columns/columns.css",
-      "timestamp": 1686036189000
+      "timestamp": 1697801135000
     },
     {
       "path": "/styles/lazy-styles.css",
-      "timestamp": 1686036193000
+      "timestamp": 1697801144000
     },
     {
       "path": "/scripts/delayed.js",
-      "timestamp": 1694517580000
+      "timestamp": 1697801143000
     },
     {
       "path": "/tools/preview/preview.js",
-      "timestamp": 1686036193000
+      "timestamp": 1697801146000
     },
     {
       "path": "/scripts/lib-polaris.js",
-      "timestamp": 1686036192000
+      "timestamp": 1697801143000
     },
     {
       "path": "/scripts/lib-franklin.js",
-      "timestamp": 1695983443000
+      "timestamp": 1697801143000
     },
     {
       "path": "/screens-demo/schedule.json",
-      "timestamp": 1685981566000
+      "timestamp": 1697807085000
     }
   ]
 }
