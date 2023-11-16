@@ -11,20 +11,7 @@
       ],
       "externalId": "/screens-demo/wknd-ordering-kiosk",
       "title": "WKND Kiosk",
-      "liveUrl": "https://main--wknd--hlxscreens.hlx.live/screens-demo/wknd-ordering-kiosk.html"
-    },
-    {
-      "manifestPath": "/screens-demo/.manifest.json",
-      "lastModified": "2023-09-29T12:19:17.000Z",
-      "hierarchy": [
-        {
-          "title": "screens-demo",
-          "path": "/screens-demo"
-        }
-      ],
-      "externalId": "/screens-demo/",
-      "title": "WKND Adventures",
-      "liveUrl": "https://main--wknd--hlxscreens.hlx.live/screens-demo/.html"
+      "liveUrl": "https://main--screens-wknd--raulugarte.hlx.live/screens-demo/wknd-ordering-kiosk.html"
     },
     {
       "manifestPath": "/screens-demo/wknd-cafe-menu.manifest.json",
@@ -37,7 +24,7 @@
       ],
       "externalId": "/screens-demo/wknd-cafe-menu",
       "title": "WKND Cafe",
-      "liveUrl": "https://main--wknd--hlxscreens.hlx.live/screens-demo/wknd-cafe-menu.html"
+      "liveUrl": "https://main--screens-wknd--raulugarte.hlx.live/screens-demo/wknd-cafe-menu.html"
     },
     {
       "manifestPath": "/screens-demo/wknd-cafe-menuboard.manifest.json",
@@ -50,7 +37,7 @@
       ],
       "externalId": "/screens-demo/wknd-cafe-menuboard",
       "title": "WKND Cafe",
-      "liveUrl": "https://main--wknd--hlxscreens.hlx.live/screens-demo/wknd-cafe-menuboard.html"
+      "liveUrl": "https://main--screens-wknd--raulugarte.hlx.live/screens-demo/wknd-cafe-menuboard.html"
     },
     {
       "manifestPath": "/screens-demo/wknd-kiosk-commerce.manifest.json",
@@ -63,7 +50,7 @@
       ],
       "externalId": "/screens-demo/wknd-kiosk-commerce",
       "title": "Idle-carousel",
-      "liveUrl": "https://main--wknd--hlxscreens.hlx.live/screens-demo/wknd-kiosk-commerce.html"
+      "liveUrl": "https://main--screens-wknd--raulugarte.hlx.live/screens-demo/wknd-kiosk-commerce.html"
     }
   ],
   "metadata": {
